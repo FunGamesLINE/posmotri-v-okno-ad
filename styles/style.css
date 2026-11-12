@@ -37,7 +37,6 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -51,11 +50,6 @@ ol {
 }
 
 
-/* ============================================
-   ШАГ 1. ЛЕЙАУТ
-   ============================================ */
-
-/* Flex-контейнер для страницы */
 .page {
   display: flex;
   justify-content: center;
@@ -63,7 +57,6 @@ ol {
   min-height: 100vh;
 }
 
-/* Основной контейнер контента */
 .content {
   display: flex;
   flex-direction: row;
@@ -74,7 +67,6 @@ ol {
   padding-bottom: 40px;
 }
 
-/* Левая секция с видео и формой */
 .result {
   display: flex;
   flex-direction: column;
@@ -82,7 +74,6 @@ ol {
   flex-shrink: 0;
 }
 
-/* Правая секция с заголовком и карточками */
 .content__details {
   display: flex;
   flex-direction: column;
@@ -90,29 +81,23 @@ ol {
   gap: 26px;
 }
 
-/* Контейнер для списка карточек */
 .content__list-container {
   height: 300px;
   overflow-y: auto;
 }
 
-/* Список карточек */
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* Элемент списка */
+
 .content__list-item {
   padding: 0 3px;
 }
 
-/* ============================================
-   ШАГ 2. УТОЧНЕНИЕ РАЗМЕРОВ
-   ============================================ */
 
-/* Контейнер видео */
 .result__video-container {
   width: 711px;
   height: 386px;
@@ -120,14 +105,14 @@ ol {
   position: relative;
 }
 
-/* Видео элемент */
+
 .result__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Карточка видео */
+
 .content__video-card {
   display: flex;
   flex-direction: row;
@@ -135,13 +120,13 @@ ol {
   gap: 12px;
 }
 
-/* Контейнер описания карточки */
+
 .content__video-card-description-container {
   flex-grow: 1;
   min-width: 0;
 }
 
-/* Изображение карточки */
+
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
@@ -150,11 +135,7 @@ ol {
   flex-shrink: 0;
 }
 
-/* ============================================
-   ШАГ 3. СТИЛИ ТЕКСТОВ
-   ============================================ */
 
-/* Заголовок страницы */
 .title {
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
@@ -168,7 +149,7 @@ ol {
   color: rgb(255 255 255 / 40%);
 }
 
-/* Заголовок поля формы */
+
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -177,13 +158,13 @@ ol {
   margin-bottom: 5px;
 }
 
-/* Ссылка карточки */
+
 .content__card-link {
   text-decoration: none;
   color: inherit;
 }
 
-/* Заголовок карточки */
+
 .content__video-card-title {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 30px;
@@ -196,7 +177,7 @@ ol {
   white-space: nowrap;
 }
 
-/* Описание карточки */
+
 .content__video-card-description {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -208,11 +189,7 @@ ol {
   overflow: hidden;
 }
 
-/* ============================================
-   ШАГ 4. СТИЛИЗУЕМ ФОРМЫ И ИХ СОСТОЯНИЯ
-   ============================================ */
 
-/* Визуально скрытый элемент */
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -223,21 +200,21 @@ ol {
   white-space: nowrap;
 }
 
-/* Fieldset формы */
+
 .search-form__fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-/* Список чекбоксов */
+
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
   gap: 15px;
 }
 
-/* Лейбл формы */
+
 .search-form__label {
   display: flex;
   align-items: center;
@@ -245,7 +222,7 @@ ol {
   width: fit-content;
 }
 
-/* Текстовое поле ввода */
+
 .search-form__textfield {
   appearance: none;
   width: 225px;
@@ -276,7 +253,7 @@ ol {
   outline-offset: 2px;
 }
 
-/* Псевдочекбокс */
+
 .search-form__pseudo-checkbox {
   width: 20px;
   height: 20px;
@@ -298,16 +275,12 @@ ol {
   opacity: 1;
 }
 
-/* Подчёркивание текста чекбокса при наведении */
+
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
-/* ============================================
-   ШАГ 5. СТИЛИЗУЕМ КНОПКИ И ИХ СОСТОЯНИЯ
-   ============================================ */
 
-/* Общая кнопка */
 .button {
   appearance: none;
   border: 1px solid #fff;
@@ -337,45 +310,41 @@ ol {
   outline-offset: 2px;
 }
 
-/* Кнопка "Найти" */
+
 .search-form__submit-button {
   width: 194px;
   height: 34px;
   align-self: flex-end;
 }
 
-/* Кнопка "Показать ещё" */
+
 .more-button {
   width: 100%;
   height: 34px;
   margin-top: 20px;
 }
 
-/* ============================================
-   ШАГ 6. СОСТОЯНИЯ КАТОЧЕК
-   ============================================ */
 
-/* Ссылка карточки как блочный элемент */
 .content__card-link {
   display: block;
 }
 
-/* Текущая карточка */
+
 .content__card-link_current {
   background-color: #545050;
 }
 
-/* Активная карточка */
+
 .content__card-link:active {
   background-color: #545050;
 }
 
-/* Карточка при наведении */
+
 .content__card-link:hover {
   text-decoration: underline;
 }
 
-/* Карточка в фокусе */
+
 .content__card-link:focus {
   outline: none;
 }
@@ -385,26 +354,18 @@ ol {
   outline-offset: 2px;
 }
 
-/* ============================================
-   ШАГ 7. РАБОТАЕМ С КЛИКАБЕЛЬНОСТЬЮ
-   ============================================ */
-
 .content__card-link,
 .button,
 .search-form__label {
   cursor: pointer;
 }
 
-/* ============================================
-   ШАГ 8. ПОЗИЦИОНИРОВАНИЕ ПРЕЛОАДЕРОВ
-   ============================================ */
-
 .result__video-container,
 .content__list-container {
   position: relative;
 }
 
-/* Форма поиска */
+
 .search-form {
   display: flex;
   flex-direction: row;
